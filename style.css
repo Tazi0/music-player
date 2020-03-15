@@ -1,0 +1,145 @@
+*:focus {
+    outline: none;
+}
+
+body {
+    font-family: Helvetica, Arial;
+    margin: 0;
+    background-color: #ffeff5;
+}
+
+#container {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 430px;
+    height: 100px;
+    margin: -4px auto;
+}
+
+#track {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    background-image: url("https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px white;
+    z-index: 3;
+}
+
+#player-control {
+    width: 250px;
+    height: 100%;
+    margin: 0 5px 0 151px;
+    z-index: 3;
+}
+
+#player-track {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    left: 15px;
+    padding: 13px 22px 10px 184px;
+    background-color: #fff7f7;
+    border-radius: 15px 15px 0 0;
+    transition: 0.3s ease top;
+    z-index: 1;
+}
+
+#player-track #album-name {
+    color: gray;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#player-track #track-name {
+    color: lightblue;
+    font-size: 13px;
+    margin: 2px 0 13px 0;
+}
+
+#player-track #track-time {
+    height: 12px;
+    position: relative;
+    top: -8px;
+    overflow: hidden;
+    font-size: 10px;
+}
+
+#player-track #track-time #current-time {
+    float: left;
+}
+
+#player-track #track-time input[type=range] {
+    -webkit-appearance: none;
+    background-color: transparent;
+    position: relative;
+    height: 20px;
+}
+
+#player-track.active {
+    top: -70px;
+    box-shadow: 0 0 0 4px #fff7f7, 0 30px 50px -15px #afb7c1;
+}
+
+#player-content {
+    position: relative;
+    height: 100%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 30px 80px #ada0a5;
+    z-index: 2;
+}
+
+.control {
+    width: 33.333%;
+    float: left;
+    padding: 12px 0;
+}
+
+.button{
+    width: 26px;
+    height: 26px;
+    padding: 25px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.button,
+.button i {
+    transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.button:hover {
+    background-color: #d6d6de;
+}
+
+.button:hover i  {
+    color: white;
+}
+
+.button i {
+    display: block;
+    color: #d6dee7;
+    font-size: 26px;
+    text-align: center;
+    line-height: 1;
+}
+
+.rotate {
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-name: yoyo;
+    animation-timing-function: linear;
+}
+
+@keyframes yoyo {
+  from { transform: rotate(  0deg); }
+  to   { transform: rotate(360deg); }
+}
