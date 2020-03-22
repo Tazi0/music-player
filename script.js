@@ -107,7 +107,7 @@ function bass() {
     var analyser = context.createAnalyser();
     // console.log(audio);
 
-    if (src != audio) {
+    if (src == null || src.mediaElement != audio) {
         src = context.createMediaElementSource(audio);
         src.connect(analyser);
     }
